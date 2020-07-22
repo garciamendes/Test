@@ -1,0 +1,65 @@
+.container-main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: #D5DEE5;
+
+  .content-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.815);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+    width: 90%;
+    height: 60%;
+
+    .title {
+      width: 50%;
+      font-size: 26px;
+      margin-bottom: 10%;
+    }
+
+    div {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      transform: translateX(-30px);
+
+      span {
+        cursor: auto !important;
+        text-align: center;
+      }
+    }
+
+    div .conteint-the-user {
+      outline: none;
+      padding: 10px;
+      width: 15%;
+      margin-left: 3%;
+      border: 1px solid #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+      border-radius: 10px;
+      cursor: pointer;
+
+      &:focus {
+        transition: .24s;
+        border: 1px solid rgba(51, 51, 51, 0.253);
+      }
+    }
+
+    .diplay-table {
+      cursor: pointer;
+      margin-top: 10%;
+      transform: translateX(-30px);
+    }
+  }
+}
+
+@keyframes rotateBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}

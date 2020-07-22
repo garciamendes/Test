@@ -1,0 +1,21 @@
+.container-main-modal {
+  background-color: #fff;
+  display: flex !important;
+  position: fixed;
+  width: 400px !important;
+  height: 320px;
+  bottom: 20px;
+  right: 100px;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+  th {
+    padding: 12px 32px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    border-bottom: 1px solid #333;
+    // border-spacing: 0;
+  }
+}
