@@ -7,7 +7,7 @@
 - Node.js > 13.x
 
 #### Steps:
-- clone the repository: ```git clone https://github.com/garciamendes/telzin.git```
+- clone the repository: ```git clone https://github.com/garciamendes/Telzin.git```
 - In **telzin** folder run:
 ```npm install```
 
