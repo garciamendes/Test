@@ -8,8 +8,8 @@
 
 #### Steps:
 - clone the repository: ```git clone https://github.com/garciamendes/Telzin.git```
-- In **telzin** folder run:
+- In **Telzin** folder run:
 ```npm install```
 
 #### Running your project
-- In telzin run: ```npm start```
+- In Telzin run: ```npm start```
