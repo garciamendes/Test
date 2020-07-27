@@ -5,12 +5,12 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 // Local imports
-import App from './App'
+import Home from './home'
 import './static/css/global.scss'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home />
   </React.StrictMode>,
   document.getElementById('root')
 )

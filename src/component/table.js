@@ -4,8 +4,10 @@ import React from 'react'
 // Local imports
 import '../static/css/modal.scss'
 
-function Table() {
+function Table(props) {
+
   return (
+
     <div className='container-main-modal'>
       <table>
         <thead>
@@ -14,41 +16,17 @@ function Table() {
           <th>$/minutos</th>
         </thead>
 
-        <tbody>
-          <th>011</th>
-          <th>016</th>
-          <th>1.90</th>
-        </tbody>
-
-        <tbody>
-          <th>016</th>
-          <th>011</th>
-          <th>2.90</th>
-        </tbody>
-
-        <tbody>
-          <th>011</th>
-          <th>017</th>
-          <th>1.70</th>
-        </tbody>
-
-        <tbody>
-          <th>017</th>
-          <th>011</th>
-          <th>2.70</th>
-        </tbody>
-
-        <tbody>
-          <th>011</th>
-          <th>018</th>
-          <th>0.90</th>
-        </tbody>
-
-        <tbody>
-          <th>018</th>
-          <th>011</th>
-          <th>1.90</th>
-        </tbody>
+        {
+          props.values && (
+            props.values.map((item, index) => (
+              <tbody key={index}>
+                <th>{item.source}</th>
+                <th>{item.destiny}</th>
+                <th>{item.price}</th>
+              </tbody>
+            ))
+          )
+        }
 
       </table>
     </div>
