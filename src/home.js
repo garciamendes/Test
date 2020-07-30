@@ -41,8 +41,9 @@ function Home() {
   ]
 
   const onClickConsult = () => {
-    if (!source && !destiny && !minute)
+    if (!source && !destiny && !minute) {
       alert('Preecha todos os campos')
+    }
 
     let price = null
 
@@ -62,7 +63,7 @@ function Home() {
         withPlanResultFinal *= price
         withPlanResultFinal += withPlanResultFinal * 0.10
         setWithPlanResult(withPlanResultFinal)
-      }else {
+      } else {
         setWithPlanResult(0)
       }
     }
@@ -73,7 +74,7 @@ function Home() {
       <div className='infos-content'>
         <h1>Sign up for a plan and speak free to any area code, you only pay for the excess minutes.</h1>
         <div className='img-infos'>
-          <img src={Wallpaper} alt=''/>
+          <img src={Wallpaper} alt='' />
         </div>
         <button className='display-table' onClick={() => setShowModal(true)}>see table</button>
         {showModal &&
@@ -86,7 +87,7 @@ function Home() {
       <div className='content-consults'>
         <div className='content-des-ori'>
           <div className='layout-lab-sel'>
-            <label>Source *</label>
+            <label>Source <span className='mandatory-input'>*</span></label>
             <select className='des-ori-content-div' onChange={event => {
               setSource(event.target.value)
             }}>
@@ -101,7 +102,7 @@ function Home() {
             </select>
           </div>
           <div className='layout-lab-sel'>
-            <label>Destiny *</label>
+            <label>Destiny <span className='mandatory-input'>*</span></label>
             <select className='des-ori-content-div' onChange={event => {
               setDestiny(event.target.value)
             }}>
@@ -117,7 +118,7 @@ function Home() {
           </div>
         </div>
         <div className='plan-div'>
-          <label>Plans TalkMore *</label>
+          <label>Plans TalkMore <span className='mandatory-input'>*</span></label>
           <select className='select-for-user' onChange={event => {
             setPlan(event.target.value)
           }}>
@@ -132,7 +133,7 @@ function Home() {
           </select>
         </div>
         <div className='minutes-content'>
-          <label>Minutes *</label>
+          <label>Minutes <span className='mandatory-input'>*</span></label>
           <input type='text' onChange={event => {
             setMinute(event.target.value)
           }} />
