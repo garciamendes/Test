@@ -51,25 +51,24 @@ function Home() {
   }
 
   function onClickConsult() {
-    if (!source && !destiny && !minute) {
+    if ((source.trim() && destiny.trim() && minute.trim()) === '') {
       alert("Preecha todos os campos");
+      return
     }
 
     let price = null;
 
     valores.forEach((item) => {
-      if (
-        item.source === tabela[parseInt(source)].ddd &&
-        item.destiny === tabela[parseInt(destiny)].ddd
-      )
+      if (item.source === tabela[parseInt(source)]?.ddd &&
+          item.destiny === tabela[parseInt(destiny)]?.ddd)
         price = item.price;
     });
 
     let noPlanResultFinal = parseInt(minute) * price;
     setNoPlanResult(noPlanResultFinal);
 
-    if (plan) {
-      let planValue = planos[parseInt(plan)].value;
+    if (plan.trim() != '') {
+      let planValue = planos[parseInt(plan)]?.value;
       let withPlanResultFinal = parseInt(minute) - planValue;
 
       if (withPlanResultFinal > 0) {
@@ -235,7 +234,7 @@ function Home() {
                   className="sc_w_p"
                   style={{ color: `${theme === true ? "#757575" : "#2B3DFA"}` }}
                 >
-                 {`R$${withPlanResult}`}
+                 {`R$ ${withPlanResult.toFixed(2)}`}
                 </span>
               </div>
 
@@ -250,7 +249,7 @@ function Home() {
                   className="sc_w_p"
                   style={{ color: `${theme === true ? "#757575" : "#2B3DFA"}` }}
                 >
-                  {`R$${noPlanResult}`}
+                  {`R$ ${noPlanResult.toFixed(2)}`}
                 </span>
               </div>
             </div>
